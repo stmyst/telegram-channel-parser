@@ -1,0 +1,15 @@
+# Pycharm
+.idea
+__pycache__
+**/__pycache__
+.env
+.pytest_cache
+.ipynb_checkpoints/
+.mypy_cache/
+.tests/
+.vscode
+.unused/
+build
+dist
+to do.md
+session_name.session
