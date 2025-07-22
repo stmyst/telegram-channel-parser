@@ -76,7 +76,7 @@ API_HASH='your_api_hash'
 
 ## Usage
 
-Set `CHANNEl`, `START_DATE`, `END_DATE` in script.py and run the parser:
+Set `CHANNEl` (should start with `@`), `START_DATE`, `END_DATE` in script.py and run the parser:
 
 ```bash
 python script.py

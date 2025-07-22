@@ -12,4 +12,4 @@ __pycache__
 build
 dist
 to do.md
-session_name.session
+session.session

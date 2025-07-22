@@ -17,13 +17,13 @@ END_DATE = datetime(year=2025, month=12, day=31)
 async def main(
     channel: str, api_id: int, api_hash: str, start_date:datetime, end_date: datetime,
 ) -> None:
-    print(f'parsing {channel}')
 
     messages = []
     albums = defaultdict(list)
     ch_name = channel.split('@')[1]
 
-    async with TelegramClient(session='session_name', api_id=api_id, api_hash=api_hash) as client:
+    async with TelegramClient(session='session', api_id=api_id, api_hash=api_hash) as client:
+        print(f'parsing {channel}')
         async for message in client.iter_messages(channel):
             message.date = message.date.replace(tzinfo=None)
             if message.date < start_date:
@@ -120,7 +120,7 @@ if __name__ == "__main__":
                 end_date=END_DATE,
             )
         finally:
-            print('elapsed {time} sec'.format(time=time.time() - start_time))
+            print('elapsed {time:.4} sec'.format(time=time.time() - start_time))
 
     asyncio.run(run())
 
