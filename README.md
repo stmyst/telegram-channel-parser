@@ -1,6 +1,6 @@
 # Telegram Channel Parser
 
-A Python script for analyzing Telegram channels and extracting valuable metrics. This tool is based on and improved from [this article](https://habr.com/ru/articles/891150/).
+A Python script for parsing and analyzing Telegram channels. This tool is based on [this article](https://habr.com/ru/articles/891150/).
 
 ## Features
 
@@ -13,11 +13,11 @@ For each message in the selected Telegram channel, the parser collects:
 - ↪️ Forwards count
 - 📊 Engagement rate
 
-All data is automatically exported to an Excel (.xlsx) file for easy analysis.
+All data is automatically exported to an Excel (.xlsx) file.
 
 ## Prerequisites
 
-- Python 3.7 or higher
+- Python 3.9 or higher
 - Telegram account
 - API credentials (API_ID and API_HASH)
 

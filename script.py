@@ -105,11 +105,11 @@ def _process_album(album: list[Message], ch_name: str) -> dict:
 
 if __name__ == "__main__":
     import os
-    from dotenv import load_dotenv
+    from dotenv import load_dotenv, find_dotenv
 
     async def run():
         start_time = time.time()
-        load_dotenv()
+        load_dotenv(find_dotenv())
 
         try:
             await main(
