@@ -1,4 +1,5 @@
 import asyncio
+import os
 import time
 from collections import defaultdict
 from datetime import datetime
@@ -20,7 +21,7 @@ async def main(
 
     messages = []
     albums = defaultdict(list)
-    ch_name = channel.split('@')[1]
+    ch_name = channel[1:] if channel.startswith('@') else os.path.basename(channel)
 
     async with TelegramClient(session='session', api_id=api_id, api_hash=api_hash) as client:
         print(f'parsing {channel}')
@@ -104,7 +105,6 @@ def _process_album(album: list[Message], ch_name: str) -> dict:
 
 
 if __name__ == "__main__":
-    import os
     from dotenv import load_dotenv, find_dotenv
 
     async def run():

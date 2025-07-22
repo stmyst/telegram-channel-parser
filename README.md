@@ -1,6 +1,6 @@
 # Telegram Channel Parser
 
-A Python script for parsing and analyzing Telegram channels. This tool is based on [this article](https://habr.com/ru/articles/891150/).
+A Python script for parsing and analyzing Telegram channels.
 
 ## Features
 
@@ -76,7 +76,7 @@ API_HASH='your_api_hash'
 
 ## Usage
 
-Set `CHANNEl` (should start with `@`), `START_DATE`, `END_DATE` in script.py and run the parser:
+Set `CHANNEl`, `START_DATE`, `END_DATE` in script.py and run the parser:
 
 ```bash
 python script.py
@@ -92,3 +92,4 @@ The script will:
 ### Notes:
 - First run will require you to authenticate with your Telegram account
 - The script will save your session for future runs
+- This tool is based on [this article](https://habr.com/ru/articles/891150/)
